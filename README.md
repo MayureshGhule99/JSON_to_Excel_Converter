@@ -27,3 +27,52 @@ A powerful Python tool to convert one or **multiple JSON files** into formatted 
 Install dependencies:
 ```bash
 pip install pandas xlsxwriter
+```
+## 🚀 How to Use
+
+### Option 1: GUI (with drag-and-drop)
+
+Run the script:
+
+```bash
+python json_to_excel_converter.py
+```
+
+A window will appear — drag and drop one or more .json files into it.
+
+Each .json file will be converted to .xlsx and saved in the same folder.
+
+### Option 2: CLI Mode (Headless)
+
+Convert a single JSON file:
+```
+python json_to_excel_converter.py path/to/file.json
+```
+Convert multiple files:
+```
+python json_to_excel_converter.py file1.json file2.json file3.json
+```
+
+## 📁 Example
+
+### Input JSON:
+[
+  {"name": "Alice", "age": 28},
+  {"name": "Bob", "age": 34}
+]
+
+### Output excel:
+| name  | age |
+| ----- | --- |
+| Alice | 28  |
+| Bob   | 34  |
+
+## ⚙️ Output Notes
+
+* File names are retained:
+data.json → data.xlsx
+
+* Existing files with the same name will be overwritten
+
+## 📜 License
+This project is released under the MIT License. Free to use, modify, and distribute.
